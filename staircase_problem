@@ -1,0 +1,11 @@
+def number_ways (n):
+    if n == 1:           #base case
+        return 1
+    elif n == 2:         #base case
+        return 2
+    elif n == 3:         #base case
+        return 4
+    return number_ways (n-1) + number_ways(n-2) + number_ways(n-3)       #recursive case
+
+n = int(input("Enter the number of steps: "))
+print ("The total number of ways to reach", n ,"steps are", number_ways(n))
